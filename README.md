@@ -15,8 +15,7 @@
   ![sass](https://img.shields.io/badge/-sass-FFC0CB?style=flat-square&logo=sass&logoColor=white)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-F7B93E?style=flat-square&logo=javascript&logoColor=white)
 
-# About
-
+## About
 > Convert time to hours and minutes
 
 ## 👤 Author
