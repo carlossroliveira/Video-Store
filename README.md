@@ -1,7 +1,3 @@
-# Video-Store
- Convert time to hours and minutes
-
-
 <h1 align="center"> 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Video Store - Project</h1>
 
 🖤 <br />
@@ -19,6 +15,9 @@
   ![sass](https://img.shields.io/badge/-sass-FFC0CB?style=flat-square&logo=sass&logoColor=white)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-F7B93E?style=flat-square&logo=javascript&logoColor=white)
 
+# About
+
+> Convert time to hours and minutes
 
 ## 👤 Author
 
