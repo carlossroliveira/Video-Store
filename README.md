@@ -15,8 +15,8 @@
   ![VSCode](https://img.shields.io/badge/-VSCode-0085D1?style=flat-square&logo=visual-studio-code&logoColor=white)
   ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
   ![html5](https://img.shields.io/badge/-html5-F7B93E?style=flat-square&logo=html5&logoColor=white)
-  ![css](https://img.shields.io/badge/-css-F7B93E?style=flat-square&logo=css&logoColor=white)
-  ![sass](https://img.shields.io/badge/-sass-F7B93E?style=flat-square&logo=sass&logoColor=white)
+  ![css3](https://img.shields.io/badge/-css3-F7B93E?style=flat-square&logo=css3&logoColor=white)
+  ![sass](https://img.shields.io/badge/-sass-FFC0CB?style=flat-square&logo=sass&logoColor=white)
   ![JavaScript](https://img.shields.io/badge/-JavaScript-F7B93E?style=flat-square&logo=javascript&logoColor=white)
 
 
