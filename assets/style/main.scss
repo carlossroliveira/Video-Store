@@ -1,0 +1,277 @@
+// ============================== Variables
+$bg-color: #424242;
+$hl-color: #3EE8E5;
+$white: white;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 320px;
+$height: 54px;
+$transition: 0.3s ease-out all;
+
+// ============================== Configuration initial
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+        font-size: 1.6rem;
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #070C20;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            .box {
+                color: white;
+                background-color: #0A3F69;
+                border-radius: 1rem;
+                padding: 3rem 5rem;
+
+                h1 {
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    font-size: 4.8rem;
+                }
+
+                .inputRs {
+                    margin: 0 auto;
+                    display: flex;
+                    margin-bottom: 3rem;
+                    padding: 1rem;
+                }
+
+                p {
+                    
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+
+                    small {
+                        color: #3EE8E5;
+                        margin-left: 1rem;
+                    }
+                }
+
+                // ============================== Inputs
+                .wrapper {
+                    .group {
+                        position: relative;
+                        margin-bottom: 3rem;
+
+                        .input {
+                            background: none;
+                            color: $muted-color;
+                            font-size: 18px;
+                            padding: 10px 10px 10px 5px;
+                            display: block;
+                            width: $width;
+                            border: none;
+                            border-radius: 0;
+                            border-bottom: 1px solid $muted-color;
+
+                            &:focus {
+                                outline: none;
+                            }
+
+                            &:focus~label,
+                            &:valid~label {
+                                top: -14px;
+                                font-size: 12px;
+                                color: $hl-color;
+                                
+                            }
+
+                            &:focus~.bar:before {
+                                width: $width;
+                            }
+                        }
+
+                        .bar {
+                            position: relative;
+                            display: block;
+                            width: $width;
+
+                            &:before {
+                                content: '';
+                                height: 2px;
+                                width: 0;
+                                bottom: 0px;
+                                position: absolute;
+                                background: $hl-color;
+                                transition: $trans-time ease all;
+                                left: 0%;
+                            }
+                        }
+
+                        label {
+                            color: $muted-color;
+                            font-size: 16px;
+                            font-weight: normal;
+                            position: absolute;
+                            pointer-events: none;
+                            left: 5px;
+                            top: 10px;
+                            transition: $trans-time ease all;
+                        }
+                    }
+                }
+
+                // ============================== Button
+                .btnEffect {
+                    display: flex;
+                    margin-bottom: 3rem;
+                    align-items: center;
+                    justify-content: center;
+                    flex-flow: column;
+
+                    & a {
+                        width: 100%;
+                        max-width: 240px;
+                        height: $height;
+                        padding: 8px;
+                        font-size: 0.8rem;
+                        font-weight: 900;
+                        color: $white;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        box-shadow: 0 0 0 1px inset rgba($white, 0.3);
+                        position: relative;
+
+                        &.white:hover>p {
+                            color: $white;
+                        }
+
+                        &.white>p {
+                            background: $white;
+                            color: $hl-color;
+
+                            & span.base {
+                                border: 1px solid transparent;
+                            }
+                        }
+
+                        &.transparent:hover>p {
+                            color: $white;
+
+                            & span.text {
+                                box-shadow: 0 0 0 1px $white;
+                            }
+                        }
+
+                        &.transparent>p {
+                            background: $hl-color;
+                            color: $white;
+
+                            & span.base {
+                                border: 1px solid $white;
+                            }
+                        }
+
+                        &:after,
+                        &:before {
+                            content: "";
+                            width: 1px;
+                            position: absolute;
+                            height: 8px;
+                            background: $hl-color;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        &:before {
+                            right: 0;
+                            left: initial;
+                        }
+
+                        & p {
+                            margin: 0;
+                            height: $height;
+                            line-height: $height;
+                            box-sizing: border-box;
+                            z-index: 1;
+                            left: 0;
+                            width: 100%;
+                            position: relative;
+                            overflow: hidden;
+
+                            & span.base {
+                                box-sizing: border-box;
+                                position: absolute;
+                                z-index: 2;
+                                width: 100%;
+                                height: 100%;
+                                left: 0;
+                                border: 1px solid $white;
+
+                                &:before {
+                                    content: "";
+                                    width: 2px;
+                                    height: 2px;
+                                    left: -1px;
+                                    top: -1px;
+                                    background: $hl-color;
+                                    position: absolute;
+                                    transition: $transition;
+                                }
+                            }
+
+                            & span.bg {
+                                left: -5%;
+                                position: absolute;
+                                background: white;
+                                width: 0;
+                                height: 100%;
+                                z-index: 3;
+                                transition: $transition;
+                                transform: skewX(-10deg);
+                            }
+
+                            & span.text {
+                                z-index: 4;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+
+                                &:after {
+                                    content: "";
+                                    width: 4px;
+                                    height: 4px;
+                                    right: 0;
+                                    bottom: 0;
+                                    background: $hl-color;
+                                    position: absolute;
+                                    transition: $transition;
+                                    z-index: 5;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            color: #3EE8E5;
+
+                            & span.bg {
+                                width: 110%;
+                            }
+
+                            & span.text:after {
+                                background: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta author="author" content="Carlos Olivira">
+  <!-- Title Start -->
+  <title>Video Store</title>
+  <!-- Style Start -->
+  <link rel="stylesheet" href="assets/style/main.css">
+  <!-- Favicon Start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+</head>
+
+<body>
+
+  <section class="container">
+    <div class="box">
+      <h1>Video Store</h1>
+
+      <div class="wrapper">
+        <form>
+          <div class="group">
+            <input class="input" type="text" required data-inTitulo>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>
+              Titulo do Filme:
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <div class="wrapper">
+        <form>
+          <div class="group">
+            <input class="input" type="number" required data-inDuracao>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>
+              Duração (min):
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <div class="btnEffect" data-btnConverter>
+        <a href="#">
+          <p>
+            <span class="bg"></span>
+            <span class="base"></span>
+            <span class="text">Verificar</span>
+          </p>
+        </a>
+      </div>
+
+      <p>
+        Titulo selecionado: <small data-outTitulo></small>
+      </p>
+
+      <p>
+        Tempo exato: <small data-outResposta></small>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- JavaScript Start -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
